@@ -1,13 +1,12 @@
 # TP3_Dataviz
 TP3 de Data-Visualization Master 2 IA
 
-Le code JS se trouve dans le fichier js. Le code CSS se trouve dans le fichier css. Il suffit de lancer líindex.html pour voir la visualisation.
+Le code JS se trouve dans le fichier js. Le code CSS se trouve dans le fichier css. Il suffit de lancer l‚Äôindex.html pour voir la visualisation.
 
-Dans le fichier js, il y a 2 fichiers†:
+Dans le fichier js, il y a 2 fichiers¬†:
 - Le premier fichier correspond au code de la partie obligatoire du TP.
-- La seconde correspond ‡ la partie Bonus.
+- La seconde correspond √† la partie Bonus.
 
-Pour visualiser la partie obligatoire, il faut dÈcommenter la ligne 14 de líindex et commenter la ligne 15.
+Pour visualiser la partie obligatoire, il faut d√©commenter la ligne 14 de l‚Äôindex et commenter la ligne 15. Le r√©sultat attendu est une carte de la France color√©e en nuance de vert par rapport aux donn√©es du 23 Mars 2020.
 
-Pour visualiser la partie bonus, il faut dÈcommenter la ligne 15 de líindex et commenter la ligne 14.
-
+Pour visualiser la partie bonus, il faut d√©commenter la ligne 15 de l‚Äôindex et commenter la ligne 14. Le r√©sultat attendu est une carte de la France color√©e en nuance de vert, avec un slider permettant de changer la date. Au changement de date, les couleurs sont mises √† jour.
