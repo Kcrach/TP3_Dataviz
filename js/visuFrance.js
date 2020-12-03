@@ -27,6 +27,11 @@ var path = d3.geoPath().projection(projection);
 var tooltip = d3.select('body').append('div')
     .attr('class', 'hidden tooltip');
 
+d3.select("#divSlider").style("display", "none")
+
+daysArray = []
+daysArraySet = false
+
 d3.csv(data).then(function(data) {
         //Set input domain for color scale
         color.domain([
@@ -42,7 +47,7 @@ d3.csv(data).then(function(data) {
             for (var i = 0; i < data.length; i++) {
                 //Nom dU departement
                 var dataDep = data[i].dep;
-                
+
                 //Jour
                 var dataDay = data[i].jour
 
@@ -52,14 +57,14 @@ d3.csv(data).then(function(data) {
                 //Recherche de l'etat dans le GeoJSON
                 for (var j = 0; j < json.features.length; j++) {
                     var jsonDep = json.features[j].properties.code;
-                    if (dataDep == jsonDep && dataDay == "25/03/2020") {
+                    if (dataDep == jsonDep && dataDay == "23/03/2020") {
                         //On injecte la valeur de l'Etat dans le json
                         json.features[j].properties.value = dataValue;
 
                         //Pas besoin de chercher plus loin
                         break;
                     }
-                }  
+                }
             }
 
             g.selectAll("path")
@@ -91,8 +96,8 @@ d3.csv(data).then(function(data) {
                         .html(d.properties.nom);
                 })
                 .on('mouseout', () => {
-                            // on cache le toolip
+                    // on cache le toolip
                     tooltip.classed('hidden', true);
-                });           
+                });     
         });
     });
